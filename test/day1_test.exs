@@ -30,6 +30,8 @@ defmodule Day1Test do
     assert Day1.zero_crossings_in_turn(0, 20) == 0
     assert Day1.zero_crossings_in_turn(52, 48) == 1
     assert Day1.zero_crossings_in_turn(0, 100) == 1
+    assert Day1.zero_crossings_in_turn(10, -20) == 1
+    assert Day1.zero_crossings_in_turn(10, -120) == 2
     assert Day1.zero_crossings_in_turn(0, 120) == 1
     assert Day1.zero_crossings_in_turn(0, -120) == 1
     assert Day1.zero_crossings_in_turn(99, -100) == 1

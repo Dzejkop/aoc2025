@@ -20,9 +20,12 @@ defmodule Day1 do
     |> Enum.count()
   end
 
-  def zero_crossings_in_turn(dial, turn) do
-    # n = 100 - dial
-    div(dial + abs(turn), 100)
+  def zero_crossings_in_turn(dial, turn) when turn > 0 do
+    div(dial + turn, 100)
+  end
+
+  def zero_crossings_in_turn(dial, turn) when turn < 0 do
+    div(Integer.mod(100 - dial, 100) - turn, 100)
   end
 
   def turn_dial(dial, turn) do
